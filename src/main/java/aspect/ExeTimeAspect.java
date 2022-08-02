@@ -28,7 +28,7 @@ public class ExeTimeAspect {
         try {
             Object result = joinPoint.proceed();
             // proceed() 메서드를 사용하여 실제 대상 객체의 메서드를 호출
-            // 이 메서드를 호출하면 대상 개게의 메서드가 실행되므로 이 코드 이전과 이후에 공통 기능을 위한 코드를 위치시키면 됨
+            // 이 메서드를 호출하면 대상 객체의 메서드가 실행되므로 이 코드 이전과 이후에 공통 기능을 위한 코드를 위치시키면 됨
 
             return result;
         } finally {

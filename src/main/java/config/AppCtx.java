@@ -13,7 +13,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 // 이 어노테이션을 추가하면 스프링은 @Aspect 어노테이션이 붙은 빈 객체를 찾아서 빈 객체의 @Pointcut 설정과 @Around 설정 사용
 public class AppCtx {
 
-    @Bean
+    //@Bean
     public ExeTimeAspect exeTimeAspect() {
         return new ExeTimeAspect();
     }
