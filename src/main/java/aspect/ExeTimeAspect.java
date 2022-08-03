@@ -26,7 +26,9 @@ public class ExeTimeAspect {
 
         long start = System.nanoTime();
         try {
+            System.out.println("measure() 실행");
             Object result = joinPoint.proceed();
+            System.out.println("proceed() 실행");
             // proceed() 메서드를 사용하여 실제 대상 객체의 메서드를 호출
             // 이 메서드를 호출하면 대상 객체의 메서드가 실행되므로 이 코드 이전과 이후에 공통 기능을 위한 코드를 위치시키면 됨
 

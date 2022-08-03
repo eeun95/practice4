@@ -17,7 +17,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 // proxyTargetClass 속성을 true로 지정하면 됨
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 
-public class AppCtx {
+public class AppCtxWithCache {
 
     @Bean
     public ExeTimeAspect exeTimeAspect() {
@@ -28,6 +28,11 @@ public class AppCtx {
     // AOP 적용 시 RecCalculator가 상속받은 Calculator 인터페이스를 이용해서 프록시 생성
     public Calculator calculator() {
         return new RecCalculator();
+    }
+
+    @Bean
+    public CacheAspect cacheAspect() {
+        return new CacheAspect();
     }
 
 }

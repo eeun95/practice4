@@ -4,6 +4,7 @@ public class RecCalculator implements Calculator{
 
     @Override
     public long factorial(long num) {
+        System.out.println("factorial() 호출");
         if(num == 0) return 1;
         else return num * factorial(num - 1);
     }
